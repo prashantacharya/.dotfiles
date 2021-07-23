@@ -23,5 +23,3 @@ nmap <silent> <c-l> :wincmd l<CR>
 nmap <silent> <c-j> :bnext<CR>
 nmap <silent> <c-k> :bprevious<CR>
 
-" Global search
-nmap <silent> <c-F> :Rg<CR>

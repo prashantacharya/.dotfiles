@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/prashant/Projects/.dotfiles'
 let g:netrw_dirhist_9='/home/prashant/.config/nvim'
 let g:netrw_dirhist_8='/home/prashant/.config/nvim/vim-plug'
 let g:netrw_dirhist_7='/home/prashant/Projects/vanilla-js/todo-list'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_4='/home/prashant/Projects/leapfrog/mvs/app/src/components/C
 let g:netrw_dirhist_3='/home/prashant/Projects/leapfrog/mvs/app/src/components/COVID'
 let g:netrw_dirhist_2='/home/prashant/Projects/leapfrog/mvs/app/src/components'
 let g:netrw_dirhist_1='/home/prashant/Projects/leapfrog/mvs/app/src'
-let g:netrw_dirhist_0='/home/prashant/Projects/leapfrog/mvs/app'
