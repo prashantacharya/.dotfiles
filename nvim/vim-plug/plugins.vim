@@ -15,4 +15,8 @@ call plug#begin()
   Plug 'preservim/nerdcommenter'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'heavenshell/vim-jsdoc', {
+    \ 'for': ['javascript', 'javascript.jsx','typescript'],
+    \ 'do': 'make install'
+  \}
 call plug#end()

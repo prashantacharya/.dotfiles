@@ -9,4 +9,4 @@ nmap <silent> <c-j> :bnext<CR>
 nmap <silent> <c-k> :bprevious<CR>
 
 " Close current buffer
-nmap <silent> <c-w> :bW<CR> 
+nmap <silent> <leader>w :bw<CR> 

@@ -8,7 +8,12 @@ set expandtab
 
 " case insensitive search
 set ignorecase
+set smartcase
 
 " use mouse on vim
 set mouse+=a
 
+set nohlsearch
+set scrolloff=8
+
+let mapleader=' '
