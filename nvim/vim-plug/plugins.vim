@@ -19,4 +19,5 @@ call plug#begin()
     \ 'for': ['javascript', 'javascript.jsx','typescript'],
     \ 'do': 'make install'
   \}
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
