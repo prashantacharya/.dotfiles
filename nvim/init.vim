@@ -7,7 +7,7 @@ source $HOME/.config/nvim/plugins/fzf-settings.vim
 source $HOME/.config/nvim/plugins/airline.vim
 
 " General Settings
+source $HOME/.config/nvim/general/c-cpp-formatting.vim
 source $HOME/.config/nvim/general/general-settings.vim
 source $HOME/.config/nvim/general/theme.vim
 source $HOME/.config/nvim/general/shortcuts.vim
-

@@ -17,3 +17,6 @@ set nohlsearch
 set scrolloff=8
 
 let mapleader=' '
+
+" Autoformat C and CPP files with astyle package
+autocmd FileType c,cpp setlocal equalprg=clang-format
