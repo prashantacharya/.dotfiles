@@ -20,4 +20,6 @@ call plug#begin()
     \ 'do': 'make install'
   \}
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'airblade/vim-gitgutter'
+
 call plug#end()
