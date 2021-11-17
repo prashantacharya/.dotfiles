@@ -107,3 +107,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # ALIASES
 alias ela="exa -la --icons"
+alias tmux='tmux attach || tmux'
+alias yd='yarn dev'
+alias ys='yarn start'
