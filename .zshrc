@@ -106,7 +106,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # ALIASES
-alias ela="exa -la --icons"
+alias ls='lsd -a'
 alias tmux='tmux attach || tmux'
 alias yd='yarn dev'
 alias ys='yarn start'
