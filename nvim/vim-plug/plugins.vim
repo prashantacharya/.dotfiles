@@ -1,6 +1,4 @@
 call plug#begin()
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'ryanoasis/vim-devicons'
   Plug 'morhetz/gruvbox'
@@ -20,4 +18,6 @@ call plug#begin()
   \}
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'airblade/vim-gitgutter'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
