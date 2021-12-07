@@ -107,7 +107,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # ALIASES
 alias ls='lsd -a'
-alias tmux='tmux attach || tmux'
 alias yd='yarn dev'
 alias ys='yarn start'
 

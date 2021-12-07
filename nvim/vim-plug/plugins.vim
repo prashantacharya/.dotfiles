@@ -20,4 +20,6 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'RyanMillerC/better-vim-tmux-resizer'
+  Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
