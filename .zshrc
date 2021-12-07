@@ -110,3 +110,8 @@ alias ela="exa -la --icons"
 alias tmux='tmux attach || tmux'
 alias yd='yarn dev'
 alias ys='yarn start'
+
+export JAVA_HOME='/usr/lib/jvm/java-16-openjdk'
+export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH="$PATH:/usr/bin/flutter/bin"

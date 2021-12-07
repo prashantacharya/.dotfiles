@@ -10,7 +10,6 @@ call plug#begin()
   Plug 'othree/yajs.vim'
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'tpope/vim-fugitive'
   Plug 'pantharshit00/vim-prisma'
   Plug 'preservim/nerdcommenter'
   Plug 'vim-airline/vim-airline'
@@ -21,5 +20,4 @@ call plug#begin()
   \}
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'airblade/vim-gitgutter'
-
 call plug#end()
