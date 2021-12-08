@@ -109,6 +109,7 @@ export NVM_DIR="$HOME/.nvm"
 alias ls='lsd -a'
 alias yd='yarn dev'
 alias ys='yarn start'
+alias c='clear'
 
 export JAVA_HOME='/usr/lib/jvm/java-16-openjdk'
 export PATH=$JAVA_HOME/bin:$PATH
