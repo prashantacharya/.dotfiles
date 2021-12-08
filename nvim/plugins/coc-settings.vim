@@ -131,7 +131,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>n
 
 " coc explorer settings
-:nnoremap <C-n> :CocCommand explorer<CR>
+:nnoremap <C-e> :CocCommand explorer<CR>
 
 " Open COC explorer on vim start
 au VimEnter * :if bufname()=='' | call execute('CocCommand explorer') | endif

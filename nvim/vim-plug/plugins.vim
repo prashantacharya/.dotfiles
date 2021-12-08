@@ -1,6 +1,7 @@
 call plug#begin()
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'ryanoasis/vim-devicons'
+  Plug 'kyazdani42/nvim-web-devicons'
   Plug 'morhetz/gruvbox'
   Plug 'mattn/emmet-vim'
   Plug 'luochen1990/rainbow'
@@ -22,4 +23,6 @@ call plug#begin()
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'RyanMillerC/better-vim-tmux-resizer'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'nvim-lualine/lualine.nvim'
+  Plug 'kdheepak/tabline.nvim'
 call plug#end()
