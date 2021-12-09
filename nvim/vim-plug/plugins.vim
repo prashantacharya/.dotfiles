@@ -6,7 +6,7 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'luochen1990/rainbow'
   Plug 'yggdroot/indentline'
-  Plug 'othree/yajs.vim'
+  Plug 'sheerun/vim-polyglot'
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'pantharshit00/vim-prisma'
