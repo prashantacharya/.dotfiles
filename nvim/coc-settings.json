@@ -23,7 +23,6 @@
   "explorer.focus": true,
   "explorer.git.enable": true,
   "explorer.keyMappings.global": {
-    "s": "open:vsplit",
     "mm": "rename",
     "mc": "copyFile",
     "C": "copyFile",
