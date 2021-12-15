@@ -49,3 +49,6 @@ function! s:ZoomToggle() abort
 endfunction
 command! ZoomToggle call s:ZoomToggle()
 nnoremap <silent> <leader>z :ZoomToggle<CR>
+
+" Source NVIM config
+nnoremap <leader>so :source $MYVIMRC<CR>
