@@ -110,6 +110,8 @@ alias ls='lsd -a'
 alias yd='yarn dev'
 alias ys='yarn start'
 alias c='clear'
+alias vim='nvim -u ~/.config/nvim/init.vim'
+alias nvim='nvim -u NONE'
 
 export JAVA_HOME='/usr/lib/jvm/java-16-openjdk'
 export PATH=$JAVA_HOME/bin:$PATH

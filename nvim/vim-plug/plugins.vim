@@ -25,4 +25,6 @@ call plug#begin()
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'kdheepak/tabline.nvim'
+  Plug 'sainnhe/vim-color-forest-night'
+  Plug 'metakirby5/codi.vim'
 call plug#end()

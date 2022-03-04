@@ -52,3 +52,8 @@ nnoremap <silent> <leader>z :ZoomToggle<CR>
 
 " Source NVIM config
 nnoremap <leader>so :source $MYVIMRC<CR>
+
+" Map W to write files
+command! W :w
+command! Q :q
+nnoremap zz zfi{

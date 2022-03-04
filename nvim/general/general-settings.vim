@@ -14,7 +14,7 @@ set smartcase
 set mouse+=a
 
 set nohlsearch
-set scrolloff=8
+set scrolloff=10
 
 let mapleader=' '
 
