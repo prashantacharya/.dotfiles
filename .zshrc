@@ -117,3 +117,10 @@ export JAVA_HOME='/usr/lib/jvm/java-16-openjdk'
 export PATH=$JAVA_HOME/bin:$PATH
 
 export PATH="$PATH:/usr/bin/flutter/bin"
+
+alias -s {py,js,json,ts,tsx}='vim'
+
+# Function aliases
+bang() {
+  node /home/prashant/Projects/mal/impls/js/step6_file.js $1
+}
