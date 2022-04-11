@@ -117,6 +117,9 @@ export JAVA_HOME='/usr/lib/jvm/java-16-openjdk'
 export PATH=$JAVA_HOME/bin:$PATH
 
 export PATH="$PATH:/usr/bin/flutter/bin"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
+
 
 alias -s {py,js,json,ts,tsx}='vim'
 

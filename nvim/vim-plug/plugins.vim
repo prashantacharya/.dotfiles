@@ -27,4 +27,6 @@ call plug#begin()
   Plug 'kdheepak/tabline.nvim'
   Plug 'sainnhe/vim-color-forest-night'
   Plug 'metakirby5/codi.vim'
+  Plug 'joshdick/onedark.vim'
+  Plug 'zivyangll/git-blame.vim'
 call plug#end()
