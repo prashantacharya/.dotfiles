@@ -18,8 +18,8 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion.
+
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
@@ -74,6 +74,8 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-z)
 
 source $ZSH/oh-my-zsh.sh
 
+# source /home/prashant/.rvm/scripts/rvm
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,8 +104,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 export PATH="$PATH:$HOME/Projects/cli-scripts"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # ALIASES
 alias ls='lsd -a'
@@ -113,7 +113,7 @@ alias c='clear'
 alias vim='nvim -u ~/.config/nvim/init.vim'
 alias nvim='nvim -u NONE'
 
-export JAVA_HOME='/usr/lib/jvm/java-16-openjdk'
+export JAVA_HOME='/usr/lib/jvm/java-19-openjdk/'
 export PATH=$JAVA_HOME/bin:$PATH
 
 export PATH="$PATH:/usr/bin/flutter/bin"
@@ -123,7 +123,21 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 alias -s {py,js,json,ts,tsx}='vim'
 
-# Function aliases
-bang() {
-  node /home/prashant/Projects/mal/impls/js/step6_file.js $1
-}
+export PNPM_HOME="/home/prashant/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+export AUTH_RSA_PRIVATE_KEY=$(cat ~/jwt.local.rsa)
+export AUTH_RSA_PUBLIC_KEY=$(cat ~/jwt.local.rsa.pub)
+export DATABASE_URL=mongodb://127.0.0.1:27017/phildb-dev
+export M2_HOME="/opt/maven"
+export MAVEN_HOME="/opt/maven"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
+
+# bun completions
+[ -s "/home/prashant/.bun/_bun" ] && source "/home/prashant/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

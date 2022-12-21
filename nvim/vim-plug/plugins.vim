@@ -1,5 +1,5 @@
 call plug#begin()
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
   Plug 'ryanoasis/vim-devicons'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'morhetz/gruvbox'
@@ -29,4 +29,6 @@ call plug#begin()
   Plug 'metakirby5/codi.vim'
   Plug 'joshdick/onedark.vim'
   Plug 'zivyangll/git-blame.vim'
+  Plug 'majutsushi/tagbar'
+  Plug 'github/copilot.vim'
 call plug#end()
