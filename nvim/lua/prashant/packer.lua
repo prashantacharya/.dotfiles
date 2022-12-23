@@ -11,8 +11,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use("sainnhe/vim-color-forest-night")
-
     use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('mbbill/undotree')
@@ -89,4 +87,7 @@ return require('packer').startup(function(use)
         end,
         requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
     }
+
+
+    use("navarasu/onedark.nvim")
 end)

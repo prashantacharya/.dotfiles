@@ -1,6 +1,5 @@
-function ColorMyPencils(color)
-    color = color or "everforest"
-    vim.cmd.colorscheme(color)
-end
+require('onedark').setup {
+    style = 'darker'
+}
 
-ColorMyPencils()
+require('onedark').load()
