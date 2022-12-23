@@ -53,4 +53,9 @@ return require('packer').startup(function(use)
 
     use("RyanMillerC/better-vim-tmux-resizer")
     use("christoomey/vim-tmux-navigator")
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 end)
