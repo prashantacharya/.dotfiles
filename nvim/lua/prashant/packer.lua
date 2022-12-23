@@ -42,7 +42,6 @@ return require('packer').startup(function(use)
     use("folke/zen-mode.nvim")
     use("github/copilot.vim")
 
-
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -58,4 +57,6 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+
+    use("lukas-reineke/indent-blankline.nvim")
 end)
