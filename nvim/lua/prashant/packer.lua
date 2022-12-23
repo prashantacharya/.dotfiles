@@ -29,7 +29,6 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-path'},
             {'saadparwaiz1/cmp_luasnip'},
             {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},
@@ -90,4 +89,9 @@ return require('packer').startup(function(use)
 
 
     use("navarasu/onedark.nvim")
+
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+
 end)
+

@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/prashant/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-lua"] = {
-    loaded = true,
-    path = "/home/prashant/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
-    url = "https://github.com/hrsh7th/cmp-nvim-lua"
-  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/prashant/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -189,8 +184,13 @@ _G.packer_plugins = {
     path = "/home/prashant/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["prettier.nvim"] = {
+    loaded = true,
+    path = "/home/prashant/.local/share/nvim/site/pack/packer/start/prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
   ["tabline.nvim"] = {
-    config = { "\27LJ\2\n�\3\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0�\1            set guioptions-=e \" Use showtabline in gui vim\n            set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\25component_separators\1\3\0\0\b\b\23section_separators\1\0\b\21show_tabs_always\1\18show_devicons\2\15show_bufnr\1\23show_filename_only\1\18modified_icon\a+ \20modified_italic\1\19show_tabs_only\1\27max_bufferline_percent\3B\1\3\0\0\b\b\1\0\1\venable\2\nsetup\ftabline\frequire\0" },
+    config = { "\27LJ\2\n�\3\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0�\1            set guioptions-=e \" Use showtabline in gui vim\n            set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\25component_separators\1\3\0\0\b\b\23section_separators\1\0\b\23show_filename_only\1\18modified_icon\a+ \20modified_italic\1\19show_tabs_only\1\27max_bufferline_percent\3B\21show_tabs_always\1\18show_devicons\2\15show_bufnr\1\1\3\0\0\b\b\1\0\1\venable\2\nsetup\ftabline\frequire\0" },
     loaded = true,
     path = "/home/prashant/.local/share/nvim/site/pack/packer/start/tabline.nvim",
     url = "https://github.com/kdheepak/tabline.nvim"
@@ -204,11 +204,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/prashant/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-color-forest-night"] = {
-    loaded = true,
-    path = "/home/prashant/.local/share/nvim/site/pack/packer/start/vim-color-forest-night",
-    url = "https://github.com/sainnhe/vim-color-forest-night"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
@@ -225,7 +220,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: tabline.nvim
 time([[Config for tabline.nvim]], true)
-try_loadstring("\27LJ\2\n�\3\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0�\1            set guioptions-=e \" Use showtabline in gui vim\n            set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\25component_separators\1\3\0\0\b\b\23section_separators\1\0\b\21show_tabs_always\1\18show_devicons\2\15show_bufnr\1\23show_filename_only\1\18modified_icon\a+ \20modified_italic\1\19show_tabs_only\1\27max_bufferline_percent\3B\1\3\0\0\b\b\1\0\1\venable\2\nsetup\ftabline\frequire\0", "config", "tabline.nvim")
+try_loadstring("\27LJ\2\n�\3\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0�\1            set guioptions-=e \" Use showtabline in gui vim\n            set sessionoptions+=tabpages,globals \" store tabpages and globals in session\n            \bcmd\bvim\foptions\25component_separators\1\3\0\0\b\b\23section_separators\1\0\b\23show_filename_only\1\18modified_icon\a+ \20modified_italic\1\19show_tabs_only\1\27max_bufferline_percent\3B\21show_tabs_always\1\18show_devicons\2\15show_bufnr\1\1\3\0\0\b\b\1\0\1\venable\2\nsetup\ftabline\frequire\0", "config", "tabline.nvim")
 time([[Config for tabline.nvim]], false)
 
 _G._packer.inside_compile = false
