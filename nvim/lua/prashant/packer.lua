@@ -70,5 +70,7 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
 
     use("windwp/nvim-autopairs")
+
+    use("terrortylor/nvim-comment")
 end)
 

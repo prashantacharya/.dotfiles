@@ -1,1 +1,6 @@
-require('lualine').setup()
+require('lualine').setup({
+  options = {
+    globalstatus= true
+  },
+})
+
