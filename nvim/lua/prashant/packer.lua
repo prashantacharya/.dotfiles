@@ -74,5 +74,7 @@ return require('packer').startup(function(use)
     use("terrortylor/nvim-comment")
 
     use("fatih/vim-go")
+
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 end)
 
