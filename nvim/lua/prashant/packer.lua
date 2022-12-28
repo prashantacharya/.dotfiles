@@ -72,5 +72,7 @@ return require('packer').startup(function(use)
     use("windwp/nvim-autopairs")
 
     use("terrortylor/nvim-comment")
+
+    use("fatih/vim-go")
 end)
 
