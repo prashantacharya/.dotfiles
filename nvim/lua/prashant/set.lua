@@ -1,7 +1,7 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 2 
+vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
@@ -28,4 +28,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-vim.g.colors_name = "forest-night"
+-- highlight copied text for 1 second
+vim.cmd [[ autocmd TextYankPost * silent! lua vim.highlight.on_yank {on_visual = false} ]]
+
+

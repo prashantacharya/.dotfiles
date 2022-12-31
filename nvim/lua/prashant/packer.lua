@@ -76,5 +76,8 @@ return require('packer').startup(function(use)
     use("fatih/vim-go")
 
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-end)
 
+    use {'glepnir/dashboard-nvim'}
+    
+    use ("windwp/nvim-ts-autotag")
+end)
