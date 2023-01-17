@@ -7,3 +7,9 @@ vim.keymap.set("n", "<C-e>", vim.cmd.NvimTreeToggle)
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
+-- K and J to move lines up and down
+vim.keymap.set("n", "<C-k>", ":move -2<CR>==")
+vim.keymap.set("n", "<C-j>", ":move +1<CR>==")
+
+-- close current buffer on ctrl+w
+vim.keymap.set("n", "<C-w>", ":bdelete<CR>")
