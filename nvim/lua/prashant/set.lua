@@ -29,6 +29,4 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 -- highlight copied text for 1 second
-vim.cmd [[ autocmd TextYankPost * silent! lua vim.highlight.on_yank {on_visual = false} ]]
-
-
+vim.cmd([[ autocmd TextYankPost * silent! lua vim.highlight.on_yank {on_visual = false} ]])
