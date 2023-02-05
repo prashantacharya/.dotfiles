@@ -93,7 +93,10 @@ return require("packer").startup(function(use)
 	})
 
 	use("RRethy/vim-illuminate")
-	use("RRethy/vim-illuminate")
 
 	use("ray-x/lsp_signature.nvim")
+
+	use({
+		"lewis6991/gitsigns.nvim",
+	})
 end)
