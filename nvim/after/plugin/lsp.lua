@@ -4,7 +4,6 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
 	"tsserver",
-	"eslint",
 	"sumneko_lua",
 	"rust_analyzer",
 })
@@ -50,6 +49,19 @@ lsp.set_preferences({
 
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
+
+	local signature_cfg = {
+		hint_enable = false,
+		floating_window = true,
+		check_completion_visible = true,
+		toggle_key = "<M-t>",
+	}
+
+	require("lsp_signature").on_attach(signature_cfg, bufnr)
+
+	if client.name == "tsserver" then
+		client.server_capabilities.documentFormattingProvider = false
+	end
 
 	if client.name == "eslint" then
 		vim.cmd.LspStop("eslint")

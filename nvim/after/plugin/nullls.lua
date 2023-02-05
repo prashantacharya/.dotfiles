@@ -4,9 +4,8 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
 	sources = {
-		null_ls.builtins.diagnostics.eslint,
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.prettier,
+		null_ls.builtins.formatting.prettierd,
 		null_ls.builtins.formatting.autopep8,
 	},
 
@@ -18,8 +17,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-
-					vim.lsp.buf.format()
+					vim.lsp.buf.format({ bufnr = bufnr })
 				end,
 			})
 		end

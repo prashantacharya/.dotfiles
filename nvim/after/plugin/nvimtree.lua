@@ -1,16 +1,6 @@
--- examples for your init.lua
-
--- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- OR setup with some options
 require("nvim-tree").setup({
 	sort_by = "case_sensitive",
 	view = {
@@ -20,6 +10,19 @@ require("nvim-tree").setup({
 				{ key = "u", action = "dir_up" },
 				-- open file when pressing e
 				{ key = "e", action = "edit" },
+				{ key = "u", action = "dir_up" },
+				{ key = "U", action = "cd" },
+			},
+		},
+		float = {
+			enable = true,
+			open_win_config = {
+				relative = "editor",
+				border = "rounded",
+				width = 220,
+				height = 35,
+				row = 5,
+				col = 75,
 			},
 		},
 	},

@@ -12,6 +12,7 @@ return require("packer").startup(function(use)
 	})
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("nvim-treesitter/nvim-treesitter-context")
 	use("nvim-treesitter/playground")
 	use("mbbill/undotree")
 
@@ -57,15 +58,9 @@ return require("packer").startup(function(use)
 
 	use("lukas-reineke/indent-blankline.nvim")
 
-	use({
-		"kdheepak/tabline.nvim",
-		requires = { { "hoob3rt/lualine.nvim", opt = true }, { "kyazdani42/nvim-web-devicons", opt = true } },
-	})
-
 	use("navarasu/onedark.nvim")
 
 	use("jose-elias-alvarez/null-ls.nvim")
-	use("MunifTanjim/prettier.nvim")
 
 	use("windwp/nvim-autopairs")
 
@@ -74,6 +69,31 @@ return require("packer").startup(function(use)
 	use("fatih/vim-go")
 
 	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
-	use({ "glepnir/dashboard-nvim" })
 	use("windwp/nvim-ts-autotag")
+
+	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	})
+
+	use({
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		after = "nvim-web-devicons", -- keep this if you're using NvChad
+		config = function()
+			require("barbecue").setup()
+		end,
+	})
+
+	use("RRethy/vim-illuminate")
+	use("RRethy/vim-illuminate")
+
+	use("ray-x/lsp_signature.nvim")
 end)
