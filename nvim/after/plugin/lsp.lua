@@ -59,10 +59,6 @@ lsp.on_attach(function(client, bufnr)
 
 	require("lsp_signature").on_attach(signature_cfg, bufnr)
 
-	if client.name == "tsserver" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
 	if client.name == "eslint" then
 		vim.cmd.LspStop("eslint")
 		return

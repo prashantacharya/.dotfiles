@@ -14,17 +14,6 @@ require("nvim-tree").setup({
 				{ key = "U", action = "cd" },
 			},
 		},
-		float = {
-			enable = true,
-			open_win_config = {
-				relative = "editor",
-				border = "rounded",
-				width = 220,
-				height = 35,
-				row = 5,
-				col = 75,
-			},
-		},
 	},
 	renderer = {
 		group_empty = true,

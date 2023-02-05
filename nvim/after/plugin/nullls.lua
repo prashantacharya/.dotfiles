@@ -2,11 +2,29 @@ local null_ls = require("null-ls")
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
+local formatting = null_ls.builtins.formatting
+
 null_ls.setup({
+	debug = false,
 	sources = {
-		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.prettierd,
-		null_ls.builtins.formatting.autopep8,
+		formatting.prettierd.with({
+			filetypes = {
+				"typescript",
+				"typescriptreact",
+				"javascript",
+				"javascriptreact",
+				"json",
+				"css",
+				"scss",
+				"html",
+				"vue",
+				"svelte",
+				"yaml",
+				"markdown",
+			},
+		}),
+		formatting.google_java_format,
+		require("typescript.extensions.null-ls.code-actions"),
 	},
 
 	on_attach = function(client, bufnr)

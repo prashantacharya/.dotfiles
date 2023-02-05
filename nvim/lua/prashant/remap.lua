@@ -14,8 +14,8 @@ vim.keymap.set("n", "K", ":move -2<CR>==")
 vim.keymap.set("n", "<C-w>", ":bdelete<CR>")
 
 -- switch buffer
-vim.keymap.set("n", "<leader-h>", "<cmd>bnext<CR>")
-vim.keymap.set("n", "<leader-l>", "<cmd>bprev<CR>")
+vim.keymap.set("n", "<leader>l", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<leader>h", "<cmd>bprev<CR>")
 
 --  git signals
 vim.keymap.set("n", "gn", "<cmd>Gitsigns next_hunk<CR>")
