@@ -7,6 +7,7 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	debug = false,
 	sources = {
+    formatting.stylua,
 		formatting.prettierd.with({
 			filetypes = {
 				"typescript",

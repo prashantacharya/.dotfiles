@@ -64,8 +64,16 @@ lsp.on_attach(function(client, bufnr)
 		return
 	end
 
+	local nmap = function(keys, func, desc)
+		if desc then
+			desc = "LSP: " .. desc
+		end
+
+		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
+	end
+
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-	vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+	nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 	vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
 	vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
 	vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
