@@ -100,5 +100,15 @@ return require("packer").startup(function(use)
 		"lewis6991/gitsigns.nvim",
 	})
 	use("echasnovski/mini.nvim")
-  use("jose-elias-alvarez/typescript.nvim")
+	use("jose-elias-alvarez/typescript.nvim")
+	use({
+		"mattn/emmet-vim",
+		config = function()
+			vim.g.user_emmet_leader_key = ","
+
+			vim.g.user_emmet_settings = {
+				indent_blockelement = 1,
+			}
+		end,
+	})
 end)
