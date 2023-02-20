@@ -51,7 +51,10 @@ return require("packer").startup(function(use)
 	use("RyanMillerC/better-vim-tmux-resizer")
 	use("christoomey/vim-tmux-navigator")
 
-	use("feline-nvim/feline.nvim")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 
 	use("lukas-reineke/indent-blankline.nvim")
 
