@@ -27,8 +27,3 @@ vim.keymap.set("n", "<leader>gd", "<cmd>Gitsigns toggle_deleted<CR>")
 vim.keymap.set("n", "<leader>gw", "<cmd>Gitsigns toggle_word_diff<CR>")
 vim.keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<CR>")
 vim.keymap.set("n", "<leader>gt", "<cmd>Telescope git_branches<CR>")
-
--- minimap
-vim.keymap.set("n", "<leader>mf", "<cmd>lua MiniMap.toggle_focus()<CR>")
-vim.keymap.set("n", "<leader>mr", "<cmd>lua MiniMap.refresh()<CR>")
-vim.keymap.set("n", "<leader>mt", "<cmd>lua MiniMap.toggle()<CR>")
