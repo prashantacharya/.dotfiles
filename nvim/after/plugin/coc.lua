@@ -17,6 +17,18 @@ function _G.check_back_space()
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
 end
 
+vim.g.coc_global_extensions = {
+	"coc-css",
+	"coc-eslint",
+	"coc-html",
+	"coc-json",
+	"coc-prettier",
+	"coc-pyright",
+	"coc-snippets",
+	"coc-tsserver",
+	"coc-yaml",
+}
+
 -- Use Tab for trigger completion with characters ahead and navigate
 -- NOTE: There's always a completion item selected by default, you may want to enable
 -- no select by setting `"suggest.noselect": true` in your configuration file
