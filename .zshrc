@@ -139,3 +139,4 @@ export MAVEN_HOME="/opt/maven"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+GOPRIVATE=github.com/optible

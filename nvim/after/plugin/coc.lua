@@ -110,7 +110,7 @@ keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
 keyset("n", "<leader>as", "<Plug>(coc-codeaction-source)", opts)
 -- Remap keys for applying codeActions to the current buffer
 keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
--- Apply the most preferred quickfix action on the current line.
+-- Apply the most pref/rrer quickfix action on the current line.
 keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
 
 -- Remap keys for apply refactor code actions.
