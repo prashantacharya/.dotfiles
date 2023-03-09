@@ -4,6 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup({
 	sort_by = "case_sensitive",
 	view = {
+		side = "right",
 		adaptive_size = true,
 		mappings = {
 			list = {
