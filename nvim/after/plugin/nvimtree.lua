@@ -5,13 +5,13 @@ require("nvim-tree").setup({
 	sort_by = "case_sensitive",
 	view = {
 		side = "right",
-		adaptive_size = true,
+		width = 50,
+		adaptive_size = false,
 		mappings = {
 			list = {
 				{ key = "u", action = "dir_up" },
 				-- open file when pressing e
 				{ key = "e", action = "edit" },
-				{ key = "u", action = "dir_up" },
 				{ key = "U", action = "cd" },
 			},
 		},

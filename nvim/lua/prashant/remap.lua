@@ -10,6 +10,8 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- K and J to move lines up and down
 vim.keymap.set("n", "J", ":move +1<CR>==")
 vim.keymap.set("n", "K", ":move -2<CR>==")
+vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv")
 
 -- close current buffer on ctrl+w
 vim.keymap.set("n", "<C-w>", ":bdelete<CR>")

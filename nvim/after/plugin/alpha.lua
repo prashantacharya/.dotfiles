@@ -34,4 +34,4 @@ dashboard.section.buttons.opts.hl = "Keyword"
 
 dashboard.opts.opts.noautocmd = true
 
--- require("alpha").setup(dashboard.opts)
+require("alpha").setup(dashboard.opts)
