@@ -46,7 +46,7 @@ require("lualine").setup({
 		lualine_b = { "branch" },
 		lualine_c = { buffer },
 		lualine_x = { "diff", "diagnostics" },
-		lualine_y = { lspStatus, "filetype" },
+		lualine_y = { "filetype" },
 		lualine_z = { "progress" },
 	},
 })

@@ -1,5 +1,6 @@
 {
   "suggest.noselect": false,
+  "coc.preferences.useQuickfixForLocations": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "html",
     "css",
