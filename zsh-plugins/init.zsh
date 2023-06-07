@@ -1,3 +1,3 @@
-CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+CURRENT_DIR=$HOME/Projects/.dotfiles/zsh-plugins
 
-source "$CURRENT_DIR/zsh-plugins/git/git.plugin.zsh"
+source "$CURRENT_DIR/git/git.plugin.zsh"
