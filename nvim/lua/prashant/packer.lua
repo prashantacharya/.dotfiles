@@ -19,7 +19,6 @@ return require("packer").startup(function(use)
 	use({ "neoclide/coc.nvim", branch = "release" })
 
 	use("folke/zen-mode.nvim")
-	use("github/copilot.vim")
 
 	use({
 		"nvim-tree/nvim-tree.lua",
@@ -49,7 +48,6 @@ return require("packer").startup(function(use)
 
 	use("fatih/vim-go")
 
-	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
 	use("windwp/nvim-ts-autotag")
 
 	use({
@@ -89,19 +87,6 @@ return require("packer").startup(function(use)
 			vim.g.user_emmet_settings = {
 				indent_blockelement = 1,
 			}
-		end,
-	})
-	-- Lua
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
-			require("which-key").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
 		end,
 	})
 end)

@@ -27,5 +27,6 @@
     }
   },
   "rust-analyzer.enable": true,
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "svelte.enable-ts-plugin": true
 }

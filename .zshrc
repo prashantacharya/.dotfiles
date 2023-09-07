@@ -1,10 +1,5 @@
-export ZSH="/home/prashant/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-z)
-# plugins=(git zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
+ZSH_PLUGINS="$HOME/Projects/.dotfiles/zsh-plugins/init.zsh"
 
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
@@ -41,3 +36,5 @@ function load_nvm () {
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+source $ZSH_PLUGINS
