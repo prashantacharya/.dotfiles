@@ -117,3 +117,4 @@ program = "/usr/bin/zsh"
 [window]
 dynamic_padding = true
 opacity = 0.9
+startup_mode = "Maximized"
