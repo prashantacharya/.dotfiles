@@ -2,3 +2,7 @@ plugged
 pack
 packer_compiled.lua
 tmux/plugins
+tmux/tmux
+tmux/tpm
+nvim/nvim
+alacritty/alacritty
