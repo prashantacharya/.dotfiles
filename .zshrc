@@ -36,6 +36,8 @@ function load_nvm () {
 
 plugins=(
   git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 # Android SDK
