@@ -120,5 +120,5 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 0.9
+opacity = 0.99
 startup_mode = "Maximized"
