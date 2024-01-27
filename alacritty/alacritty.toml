@@ -3,7 +3,7 @@ live_config_reload = true
 # TokyoNight Alacritty Colors
 # Default colors
 [colors.primary]
-background = '#1a1b26'
+background = '#1c1c1c'
 foreground = '#c0caf5'
 
 #[colors.cursor]
@@ -120,5 +120,5 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 1
+opacity = 0.9
 startup_mode = "Maximized"
