@@ -40,4 +40,4 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 source $ZSH_PLUGINS
-source "$CONFIG_DIR/z"
+source "$CONFIG_DIR/z/z.sh"
