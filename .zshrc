@@ -1,13 +1,13 @@
 CONFIG_DIR="$HOME/Projects/.dotfiles"
 
+export ZSH="$HOME/.oh-my-zsh"
+
 ZSH_THEME="robbyrussell"
-ZSH_PLUGINS="$CONFIG_DIR/zsh-plugins/init.zsh"
 
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshso="source ~/.zshrc"
 
-eval "$(starship init zsh)"
 export PATH="$PATH:$HOME/Projects/cli-scripts"
 
 # ALIASES
@@ -34,10 +34,15 @@ function load_nvm () {
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 }
 
+plugins=(
+  git
+)
+
 # Android SDK
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-source $ZSH_PLUGINS
 source "$CONFIG_DIR/z/z.sh"
+source $ZSH/oh-my-zsh.sh
+eval "$(starship init zsh)"
