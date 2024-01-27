@@ -1,5 +1,7 @@
+CONFIG_DIR="$HOME/Projects/.dotfiles"
+
 ZSH_THEME="robbyrussell"
-ZSH_PLUGINS="$HOME/Projects/.dotfiles/zsh-plugins/init.zsh"
+ZSH_PLUGINS="$CONFIG_DIR/zsh-plugins/init.zsh"
 
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
@@ -22,7 +24,7 @@ export PATH="$PATH:/usr/local/flutter/bin"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 
-alias -s {py,js,json,ts,tsx}='vim'
+alias -s {py,js,json,ts,tsx}='nvim'
 
 export GOPRIVATE="github.com/optible"
 
@@ -38,3 +40,4 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 source $ZSH_PLUGINS
+source "$CONFIG_DIR/z"
