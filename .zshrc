@@ -38,6 +38,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  poetry
 )
 
 # Android SDK
@@ -48,3 +49,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 source "$CONFIG_DIR/z/z.sh"
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/prashant/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

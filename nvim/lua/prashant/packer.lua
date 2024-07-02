@@ -91,4 +91,6 @@ return require("packer").startup(function(use)
 	})
 
   use('xiyaowong/transparent.nvim')
+
+  use("supermaven-inc/supermaven-nvim")
 end)

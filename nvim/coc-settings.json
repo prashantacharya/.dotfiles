@@ -13,7 +13,6 @@
     "graphql",
     "dart"
   ],
-  "prettier.requireConfig": true,
   "languageserver": {
     "ccls": {
       "command": "ccls",
