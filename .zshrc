@@ -46,7 +46,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-source "$CONFIG_DIR/z/z.sh"
+source "$HOME/z/z.sh"
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
