@@ -27,5 +27,9 @@
   },
   "rust-analyzer.enable": true,
   "snippets.ultisnips.pythonPrompt": false,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "coc.source.vimtex.filetypes": [
+    "tex",
+    "latex"
+  ]
 }

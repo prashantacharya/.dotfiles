@@ -8,6 +8,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias zshso="source ~/.zshrc"
 
+export PATH=$HOME/.local/bin:$PATH
 export PATH="$PATH:$HOME/Projects/cli-scripts"
 
 # ALIASES

@@ -11,7 +11,7 @@ require("nvim-tree").setup({
 			list = {
 				{ key = "u", action = "dir_up" },
 				-- open file when pressing e
-				{ key = "e", action = "edit" },
+				{ key = "e", action = "open" },
 				{ key = "U", action = "cd" },
 			},
 		},
