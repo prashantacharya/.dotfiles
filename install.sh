@@ -4,11 +4,11 @@ source /etc/os-release
 
 if [[ $ID_LIKE == *"arch"* ]]; then
     echo "Installing packages for Arch-based system..."
-    sudo pacman -S neovim alacritty tmux git base-devel
+    sudo pacman -S neovim alacritty tmux git base-devel ripgrep
 elif [[ $ID_LIKE == *"debian"* ]] || [[ $ID == "ubuntu" ]]; then
     echo "Installing packages for Debian/Ubuntu-based system..."
     sudo apt update
-    sudo apt install -y neovim tmux git build-essential zsh
+    sudo apt install -y neovim tmux git build-essential zsh ripgrep
     
     # Install Alacritty (it's not in the default Ubuntu repositories)
     if ! command -v alacritty &> /dev/null; then
@@ -26,7 +26,7 @@ echo "Installing starship prompt"
 curl -sS https://starship.rs/install.sh | sh
 
 echo "Cloning TPM"
-tpm_dir="$HOME/.config/tmux/plugins/tpm"
+tpm_dir="$HOME/.config/tmux/plugins/"
 mkdir -p "$(dirname "$tpm_dir")"
 git clone https://github.com/tmux-plugins/tpm "$tpm_dir"
 echo "TPM Cloned"
