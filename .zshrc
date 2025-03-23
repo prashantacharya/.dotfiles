@@ -58,3 +58,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+[[ -s "/home/prashant/.gvm/scripts/gvm" ]] && source "/home/prashant/.gvm/scripts/gvm"
