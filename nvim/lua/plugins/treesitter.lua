@@ -1,17 +1,23 @@
-return {"nvim-treesitter/nvim-treesitter", 
-    ensure_installed = { 
-      "typescript",
-      "javascript",
-      "lua",
-      "json",
-      "bash",
-      "markdown",
-      "tsx",
-      "go",
-      "python"
-    }, 
-    highlight = {
-      enable = true,              -- false will disable the whole extension
-      additional_vim_regex_highlighting = false,
-    },
-  }
+return {
+  "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
+  config = function () 
+    local configs = require("nvim-treesitter.configs")
+
+    configs.setup({
+      ensure_installed = {
+        "typescript",
+        "javascript",
+        "go",
+        "markdown",
+        "json",
+        "python",
+        "lua",
+        "c",
+      },
+      sync_install = false,
+      highlight = { enable = true },
+      indent = { enable = true },  
+    })
+  end
+}
