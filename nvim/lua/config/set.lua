@@ -29,5 +29,6 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.cmd.colorscheme "catppuccin"
 
 vim.cmd([[ autocmd TextYankPost * silent! lua vim.highlight.on_yank ]])
