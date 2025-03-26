@@ -4,6 +4,7 @@ echo "Creating symlink for Neovim configuration"
 ln -s $mydir/nvim ~/.config/nvim
 
 echo "Creating symlink for Tmux configuration"
+rm -rf ~/.config/tmux
 ln -s $mydir/tmux ~/.config/tmux
 
 echo "Creating symlink for .zshrc"
