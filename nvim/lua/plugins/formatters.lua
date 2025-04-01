@@ -24,6 +24,10 @@ return {
         -- Optional: Organize imports
         null_ls.builtins.code_actions.gomodifytags,
         null_ls.builtins.code_actions.impl,
+
+        -- Lua
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.lua_format,
       },
 
       on_attach = function(client, bufnr)

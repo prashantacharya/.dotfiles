@@ -1,4 +1,5 @@
 return {
   "nvim-lualine/lualine.nvim",
-  "RyanMillerC/better-vim-tmux-resizer"
+  "RyanMillerC/better-vim-tmux-resizer",
+  "xiyaowong/transparent.nvim"
 }
