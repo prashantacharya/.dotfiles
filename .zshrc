@@ -16,11 +16,14 @@ alias ls='lsd -a'
 alias yd='yarn dev'
 alias ys='yarn start'
 alias c='clear'
+alias vi='nvim'
+alias vim='nvim'
 
 # JAVA AND FLUTTER PATHS
 export JAVA_HOME='/usr/lib/jvm/java-20-openjdk/'
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:/usr/local/flutter/bin"
+export PATH="$PATH:/home/prashant/codeql"
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
@@ -60,3 +63,10 @@ esac
 # pnpm end
 
 [[ -s "/home/prashant/.gvm/scripts/gvm" ]] && source "/home/prashant/.gvm/scripts/gvm"
+
+# bun completions
+[ -s "/home/prashant/.bun/_bun" ] && source "/home/prashant/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
