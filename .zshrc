@@ -18,9 +18,11 @@ alias ys='yarn start'
 alias c='clear'
 alias vi='nvim'
 alias vim='nvim'
+alias cursor='~/Applications/cursor/cursor.AppImage --no-sandbox'
+
 
 # JAVA AND FLUTTER PATHS
-export JAVA_HOME='/usr/lib/jvm/java-20-openjdk/'
+export JAVA_HOME='/usr/lib/jvm/java-21-openjdk-amd64'
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:/usr/local/flutter/bin"
 export PATH="$PATH:/home/prashant/codeql"
@@ -70,3 +72,10 @@ esac
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+
+# This alias runs the Cursor Setup Wizard, simplifying installation and configuration.
+# For more details, visit: https://github.com/jorcelinojunior/cursor-setup-wizard
+alias cursor-setup="/home/prashant/cursor-setup-wizard/cursor_setup.sh"
+
