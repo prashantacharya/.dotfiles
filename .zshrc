@@ -18,7 +18,7 @@ alias ys='yarn start'
 alias c='clear'
 alias vi='nvim'
 alias vim='nvim'
-alias cursor='~/Applications/cursor/cursor.AppImage --no-sandbox'
+alias bat="batcat"
 
 
 # JAVA AND FLUTTER PATHS
@@ -79,3 +79,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # For more details, visit: https://github.com/jorcelinojunior/cursor-setup-wizard
 alias cursor-setup="/home/prashant/cursor-setup-wizard/cursor_setup.sh"
 
+
+# Pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"    # needed for login shells
+eval "$(pyenv init -)"

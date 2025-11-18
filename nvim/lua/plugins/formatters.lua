@@ -1,5 +1,6 @@
 return {
   "nvimtools/none-ls.nvim",
+
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     local null_ls = require("null-ls")
@@ -12,8 +13,16 @@ return {
         -- JavaScript / TypeScript / HTML / CSS / JSON / Markdown
         null_ls.builtins.formatting.prettier.with({
           filetypes = {
-            "javascript", "typescript", "javascriptreact", "typescriptreact",
-            "html", "css", "scss", "json", "yaml", "markdown",
+            "javascript",
+            "typescript",
+            "javascriptreact",
+            "typescriptreact",
+            "html",
+            "css",
+            "scss",
+            "json",
+            "yaml",
+            "markdown",
           },
         }),
 
@@ -27,24 +36,16 @@ return {
 
         -- Lua
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.lua_format,
       },
+    })
 
-      on_attach = function(client, bufnr)
-        if client.supports_method("textDocument/formatting") then
-          local group = vim.api.nvim_create_augroup("LspFormatting", { clear = false })
-
-          vim.api.nvim_clear_autocmds({ group = group, buffer = bufnr })
-
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            group = group,
-            buffer = bufnr,
-            callback = function()
-              vim.lsp.buf.format({ bufnr = bufnr })
-            end,
-          })
-        end
-      end
+    -- Setup formatting on save for none-ls
+    local group = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = group,
+      callback = function()
+        vim.lsp.buf.format({ bufnr = 0, async = false })
+      end,
     })
   end,
 }

@@ -3,6 +3,7 @@ return {
   event = "InsertEnter", -- Lazy load on insert
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
+    "hrsh7th/nvim-cmp",
   },
   config = function()
     local autopairs = require("nvim-autopairs")
@@ -14,5 +15,10 @@ return {
         java = false,
       },
     })
+
+    -- Integration with nvim-cmp
+    local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+    local cmp = require("cmp")
+    cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
   end,
 }
