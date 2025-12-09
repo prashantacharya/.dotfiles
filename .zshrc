@@ -18,7 +18,8 @@ alias ys='yarn start'
 alias c='clear'
 alias vi='nvim'
 alias vim='nvim'
-alias bat="batcat"
+alias bat='batcat'
+alias copy='xclip -selection clipboard'
 
 
 # JAVA AND FLUTTER PATHS
