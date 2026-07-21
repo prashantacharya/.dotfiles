@@ -30,4 +30,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.cmd([[ autocmd TextYankPost * silent! lua vim.highlight.on_yank ]])
+vim.cmd([[ autocmd TextYankPost * silent! lua vim.hl.on_yank() ]])

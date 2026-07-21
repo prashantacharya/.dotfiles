@@ -116,7 +116,7 @@ save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [terminal.shell]
-program = "/usr/bin/zsh"
+program = "/bin/zsh"
 
 [window]
 opacity = 0.99
