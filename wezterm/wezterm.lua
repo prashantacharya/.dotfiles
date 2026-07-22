@@ -41,26 +41,47 @@ config.colors = {
   },
 }
 
-wezterm.on("format-tab-title", function(tab)
-  local title = tab.active_pane.title
-
-  if title == "" then
-    title = "shell"
+local function basename(path)
+  if not path then
+    return nil
   end
 
+  path = path:gsub("/$", "")
+  return path:match("([^/]+)$")
+end
+
+wezterm.on("format-tab-title", function(tab)
+  local pane = tab.active_pane
+  local process = basename(pane.foreground_process_name)
+  local title = pane.title
   local index = tab.tab_index + 1
 
-  if tab.is_active then
-    return {
-      { Attribute = { Intensity = "Bold" } },
-      { Text = string.format(" %d:%s ", index, title) },
-    }
+  local shells = {
+    zsh = true,
+    bash = true,
+    fish = true,
+    nu = true,
+  }
+
+  if process and shells[process] then
+    local cwd = pane.current_working_dir
+
+    if cwd then
+      title = basename(cwd.file_path or tostring(cwd)) or "shell"
+    else
+      title = "shell"
+    end
+  elseif process then
+    title = process
   end
 
   return {
-    { Text = string.format(" %d:%s ", index, title) },
+    {
+      Text = string.format(" %d:%s ", index, title),
+    },
   }
 end)
+
 
 wezterm.on("update-status", function(window, pane)
   local cwd = pane:get_current_working_dir()
