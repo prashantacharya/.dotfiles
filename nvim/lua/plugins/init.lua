@@ -78,4 +78,5 @@ return {
       vim.keymap.set("n", "<A-l>", smart_splits.resize_right)
     end,
   }
+
 }
