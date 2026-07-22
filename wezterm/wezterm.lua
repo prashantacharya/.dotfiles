@@ -10,10 +10,75 @@ config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 
 -- Config for tab bar
+-- Tmux-style statusline
 config.enable_tab_bar = true
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
-config.window_decorations = "RESIZE"
+config.hide_tab_bar_if_only_one_tab = false
+config.show_new_tab_button_in_tab_bar = false
+config.tab_max_width = 32
+
+
+config.colors = {
+  tab_bar = {
+    background = "rgba(0, 0, 0, 0.0)",
+
+    active_tab = {
+      bg_color = "#7aa2f7",
+      fg_color = "#1a1b26",
+      intensity = "Bold",
+    },
+
+    inactive_tab = {
+      bg_color = "rgba(0, 0, 0, 0.0)",
+      fg_color = "#a9b1d6",
+    },
+
+    inactive_tab_hover = {
+      bg_color = "#292e42",
+      fg_color = "#c0caf5",
+    },
+  },
+}
+
+wezterm.on("format-tab-title", function(tab)
+  local title = tab.active_pane.title
+
+  if title == "" then
+    title = "shell"
+  end
+
+  local index = tab.tab_index + 1
+
+  if tab.is_active then
+    return {
+      { Attribute = { Intensity = "Bold" } },
+      { Text = string.format(" %d:%s ", index, title) },
+    }
+  end
+
+  return {
+    { Text = string.format(" %d:%s ", index, title) },
+  }
+end)
+
+wezterm.on("update-status", function(window, pane)
+  local cwd = pane:get_current_working_dir()
+  local cwd_text = ""
+
+  if cwd then
+    cwd_text = cwd.file_path or tostring(cwd)
+    cwd_text = cwd_text:match("([^/]+)/*$") or cwd_text
+  end
+
+  local date = wezterm.strftime("%a %H:%M")
+
+  window:set_right_status(
+    wezterm.format({
+      { Text = string.format(" %s | %s ", cwd_text, date) },
+    })
+  )
+end)
 
 -- Move between panes and resize
 -- seemlessly with smart-splits.nvim
