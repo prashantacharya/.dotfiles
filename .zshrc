@@ -18,7 +18,7 @@ alias ys='yarn start'
 alias c='clear'
 
 # JAVA AND FLUTTER PATHS
-export JAVA_HOME='/usr/lib/jvm/java-20-openjdk/'
+export JAVA_HOME='/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home'
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:/usr/local/flutter/bin"
 
