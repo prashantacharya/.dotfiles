@@ -16,9 +16,10 @@ alias ls='lsd -a'
 alias yd='yarn dev'
 alias ys='yarn start'
 alias c='clear'
+alias copy='pbcopy'
 
 # JAVA AND FLUTTER PATHS
-export JAVA_HOME='/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home'
+export JAVA_HOME='/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home'
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH="$PATH:/usr/local/flutter/bin"
 
