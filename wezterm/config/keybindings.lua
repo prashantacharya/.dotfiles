@@ -72,6 +72,85 @@ function M.apply(config)
 			action = wezterm.action.TogglePaneZoomState,
 		},
 
+		-- Fuzzy find workspaces (tmux-session-like)
+		{
+			key = "W",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.ShowLauncherArgs({
+				flags = "FUZZY|WORKSPACES",
+			}),
+		},
+
+		-- Create a new named workspace (prompts for a name instead of
+		-- leaving it as a random id)
+		{
+			key = "N",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.PromptInputLine({
+				description = "Name for new workspace",
+				action = wezterm.action_callback(function(window, pane, line)
+					if line and line ~= "" then
+						window:perform_action(wezterm.action.SwitchToWorkspace({ name = line }), pane)
+					end
+				end),
+			}),
+		},
+
+		-- Rename the current workspace
+		{
+			key = "R",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action_callback(function(window, pane)
+				window:perform_action(
+					wezterm.action.PromptInputLine({
+						description = "New name for this workspace",
+						initial_value = wezterm.mux.get_active_workspace(),
+						action = wezterm.action_callback(function(_, _, line)
+							if line and line ~= "" then
+								wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
+							end
+						end),
+					}),
+					pane
+				)
+			end),
+		},
+
+		-- Kill the current workspace: closes every tab in every window
+		-- that belongs to it (type "y" to confirm)
+		{
+			key = "K",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action_callback(function(window, pane)
+				window:perform_action(
+					wezterm.action.PromptInputLine({
+						description = "Kill workspace '" .. wezterm.mux.get_active_workspace() .. "'? (y/n)",
+						action = wezterm.action_callback(function(_, _, line)
+							if line ~= "y" and line ~= "Y" then
+								return
+							end
+
+							local mux = wezterm.mux
+							local workspace = mux.get_active_workspace()
+
+							for _, mux_win in ipairs(mux.all_windows()) do
+								if mux_win:get_workspace() == workspace then
+									local gui_win = mux_win:gui_window()
+									for _, tab_info in ipairs(mux_win:tabs_with_info()) do
+										gui_win:perform_action(
+											wezterm.action.CloseCurrentTab({ confirm = false }),
+											tab_info.tab:active_pane()
+										)
+									end
+								end
+							end
+						end),
+					}),
+					pane
+				)
+			end),
+		},
+
 		-- Move between panes
 		split_nav("move", "h"),
 		split_nav("move", "j"),
