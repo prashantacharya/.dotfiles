@@ -157,6 +157,21 @@ function M.apply(config)
 			end),
 		},
 
+		-- Toggle between dark and light theme
+		{
+			key = "T",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action_callback(function(window, pane)
+				local overrides = window:get_config_overrides() or {}
+				if overrides.color_scheme == "Tokyo Night Day" then
+					overrides.color_scheme = "Tokyo Night"
+				else
+					overrides.color_scheme = "Tokyo Night Day"
+				end
+				window:set_config_overrides(overrides)
+			end),
+		},
+
 		-- Move between panes
 		split_nav("move", "h"),
 		split_nav("move", "j"),
