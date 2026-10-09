@@ -28,7 +28,6 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 alias -s {py,js,json,ts,tsx}='nvim'
 
-export GOPRIVATE="github.com/optible"
 
 function load_nvm () {
   export NVM_DIR="$HOME/.nvm"
