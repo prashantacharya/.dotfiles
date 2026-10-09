@@ -8,6 +8,12 @@ local function is_nvim(pane)
 	return pane:get_user_vars().IS_NVIM == "true"
 end
 
+-- Inside tmux, let tmux (and nvim within it) handle the keys
+local function is_tmux(pane)
+	local process = pane:get_foreground_process_name() or ""
+	return process:find("tmux") ~= nil
+end
+
 local directions = {
 	h = "Left",
 	j = "Down",
@@ -21,7 +27,7 @@ local function split_nav(mode, key)
 		mods = mode == "resize" and "ALT" or "CTRL",
 
 		action = wezterm.action_callback(function(window, pane)
-			if is_nvim(pane) then
+			if is_nvim(pane) or is_tmux(pane) then
 				-- Let smart-splits.nvim handle the key.
 				window:perform_action(
 					wezterm.action.SendKey({

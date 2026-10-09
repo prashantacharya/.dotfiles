@@ -1,7 +1,7 @@
 local smart_splits = require("smart-splits")
 
 smart_splits.setup({
-  multiplexer_integration = "wezterm",
+  -- auto-detect: tmux when inside tmux, wezterm otherwise
 })
 
 -- Navigate
