@@ -48,7 +48,8 @@ return {
 	-- Utilities
 	{ "mbbill/undotree", lazy = false },
 
-	{ "mrjones2014/smart-splits.nvim", lazy = false },
+	-- v3 dropped built-in tmux/WezTerm support (needs separate backend plugins)
+	{ "mrjones2014/smart-splits.nvim", lazy = false, tag = "v2.1.1-final" },
 
 	{
 		"MeanderingProgrammer/render-markdown.nvim",

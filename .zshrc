@@ -35,6 +35,19 @@ function load_nvm () {
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 }
 
+
+
+lidawake() {
+  sudo pmset -a disablesleep 1 || return
+  echo "Lid sleep disabled. Press Ctrl-C to restore."
+  {
+    while true; do sleep 3600; done
+  } always {
+    sudo pmset -a disablesleep 0
+    echo "Sleep restored."
+  }
+}
+
 plugins=(
   git
   zsh-autosuggestions
