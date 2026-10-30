@@ -38,14 +38,14 @@ function load_nvm () {
 
 
 lidawake() {
-  sudo pmset -a disablesleep 1 || return
-  echo "Lid sleep disabled. Press Ctrl-C to restore."
-  {
-    while true; do sleep 3600; done
-  } always {
-    sudo pmset -a disablesleep 0
-    echo "Sleep restored."
-  }
+  # Run the whole thing as root so the restore never needs a password prompt,
+  # and trap HUP so closing the terminal also restores sleep.
+  sudo sh -c '
+    pmset -a disablesleep 1 || exit 1
+    trap "pmset -a disablesleep 0; echo \"Sleep restored.\"; exit" INT TERM HUP
+    echo "Lid sleep disabled. Press Ctrl-C (or close this terminal) to restore."
+    while :; do sleep 60 & wait $!; done
+  '
 }
 
 plugins=(
