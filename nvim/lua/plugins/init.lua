@@ -60,4 +60,6 @@ return {
 		---@type render.md.UserConfig
 		opts = {},
 	},
+
+	{ "glacambre/firenvim", build = ":call firenvim#install(0)" },
 }
