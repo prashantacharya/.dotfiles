@@ -37,7 +37,7 @@ function load_nvm () {
 
 
 
-lidawake() {
+stayawake() {
   # Run the whole thing as root so the restore never needs a password prompt,
   # and trap HUP so closing the terminal also restores sleep.
   sudo sh -c '
